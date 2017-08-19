@@ -1624,6 +1624,7 @@ Author URI: https://www.ccrossan.com
 			#content-wrapper {
 				background: #f7f7f7 url("images/bg04.png");
 				padding: 5px;
+				margin-top:44px;
 			}
 
 			.subpage #content-wrapper {

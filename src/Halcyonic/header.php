@@ -26,7 +26,7 @@
 							<div class="12u">
 
 								<!-- Logo -->
-									<h1><a href="#" id="logo"><?= get_bloginfo("name")?></a></h1>
+									<h1><a href="<?= home_url()?>" id="logo"><?= get_bloginfo("name")?></a></h1>
 
 								<!-- Nav -->
 								<?php wp_nav_menu( array( 

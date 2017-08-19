@@ -18,7 +18,7 @@
 							
 						?>
 
-						<a href="<?= $primaryNav[0]->url ?>" class="button-big"><?= $primaryNav[0]->post_title ?><a>
+						<a href="<?= $primaryNav[0]->url ?>" class="button-big"><?= $primaryNav[0]->title ?><a>
 
 				</div>
 				<div class="6u 12u(mobile)">

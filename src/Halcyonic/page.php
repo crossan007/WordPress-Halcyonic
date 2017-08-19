@@ -14,7 +14,7 @@
 										<section>
 											<header>
 												<h2><? the_title(); ?></h2>
-												<h3>A generic one column layout</h3>
+												<h3><?= (has_excerpt() ? get_the_excerpt() : "") ?></h3>
 											</header>
 											<? the_content(); ?>
                                         </section>
