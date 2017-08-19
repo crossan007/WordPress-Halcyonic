@@ -1,2 +1,2 @@
-rm -rf public/wp-content/themes/MyTheme
-cp -R src/MyTheme public/wp-content/themes
+rm -rf public/wp-content/themes/Halcyonic
+cp -R src/Halcyonic public/wp-content/themes
