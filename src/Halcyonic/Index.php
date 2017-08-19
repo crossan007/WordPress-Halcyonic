@@ -39,12 +39,26 @@
 						<div class="container">
 							<div class="row">
 								<?php
-									$posts = get_posts([
+									$posts = get_posts(array(
 										'post_type' => 'featured_post',
 										'post_status' => 'publish',
-										'numberposts' => 4
-										// 'order'    => 'ASC'
-									  ]);
+										'numberposts' => 4,
+										'meta_query' => array(
+											'relation' => 'AND',
+											'be_featured_post' => array(
+												'key' => 'featured_post_location',
+												'value' => "features"
+											),
+											'have_position' => array(
+												'key' => 'featured_post_position',
+												'type' => 'NUMERIC',
+												'compare' => 'EXISTS'
+											)
+										),
+										'orderby' => array (
+											'have_position' => 'ASC'
+										)
+									  ));
 									foreach($posts as $post)
 									{
 								?>
