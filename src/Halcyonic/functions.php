@@ -78,6 +78,17 @@ function admin_init(){
   add_meta_box("Featured Post Placement", "Placement", "featured_post_placement", "featured_post", "side", "low");
 }
 
+function themename_custom_logo_setup() {
+  $defaults = array(
+      'height'      => 158,
+      'width'       => 470,
+      'flex-height' => false,
+      'flex-width'  => false
+  );
+  add_theme_support( 'custom-logo', $defaults );
+}
+
+add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 add_theme_support( 'post-thumbnails' );
 add_action('init', 'register_featured_post_type');
 add_action('init', 'register_my_menus');

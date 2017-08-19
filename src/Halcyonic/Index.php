@@ -24,7 +24,11 @@
 				<div class="6u 12u(mobile)">
 
 					<!-- Banner Image -->
-						<a href="#" class="bordered-feature-image"><img src="https://html5up.net/uploads/demos/halcyonic/images/banner.jpg" alt="" /></a>
+					<?php
+						$custom_logo_id = get_theme_mod( 'custom_logo' );
+						$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' )[0];
+					?>
+						<a href="#" class="bordered-feature-image"><img src="<?= $logo ?>" alt="" /></a>
 
 				</div>
 			</div>
