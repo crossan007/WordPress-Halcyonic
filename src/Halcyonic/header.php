@@ -11,9 +11,10 @@
 		<title><?= get_bloginfo("name")?></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="<?php echo get_bloginfo('template_directory'); ?>assets/js/ie/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 8]><script src="<?php echo get_bloginfo('template_directory'); ?>/assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_url'); ?>" />
-        <!--[if lte IE 9]><link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>assets/css/ie9.css" /><![endif]-->
+		<link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/font-awesome/css/font-awesome.min.css">
+        <!--[if lte IE 9]><link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/ie9.css" /><![endif]-->
         <?php wp_head(); ?>
 	</head>
 	<body>

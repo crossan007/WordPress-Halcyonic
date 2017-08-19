@@ -39,13 +39,23 @@
 		// Off-Canvas Navigation.
 
 			// Title Bar.
+				var homeLink = '';
+				if ($('#logo').attr('href'))
+				{
+					homeLink = $("<a>", {
+						'href':$('#logo').attr('href'),
+						'html':'<i class="fa fa-home" aria-hidden="true"></i>',
+						'id' : 'homeLink'
+					}).prop("outerHTML");
+				}
+
 				$(
 					'<div id="titleBar">' +
 						'<a href="#navPanel" class="toggle"></a>' +
-						'<span class="title">' + $('#logo').html() + '</span>' +
+						'<span class="title">' + $('#logo').html()  +'</span>'  + homeLink +
 					'</div>'
-				)
-					.appendTo($body);
+				)					
+				.appendTo($body);
 
 			// Navigation Panel.
 				$(
