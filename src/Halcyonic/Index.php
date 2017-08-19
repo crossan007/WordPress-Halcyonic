@@ -115,20 +115,22 @@
 									  ));
 									foreach($posts as $post)
 									{
+										setup_postdata( $post );
 										$featuredImageURL = get_the_post_thumbnail_url($post->ID,'full'); 
+										$list_style = get_post_meta($post->ID, 'list_style', true);
 								?>
 
 									<div class="4u 12u(mobile)">
 
 									<!-- Box #1 -->
-										<section>
+										<section <?= ($list_style ? "class=\"".$list_style."\"" : "") ?>>
 											<header>
 												<h2><?= $post->post_title?></h2>
-												<h3><?= get_post_meta($post->ID, 'post_sub_title', true) ?></h3>
+												<h3><?= (has_excerpt() ? get_the_excerpt() : "") ?></h3>
 											</header>
 											<a href="<?= get_post_meta($post->ID, 'link_url', true) ?>" class="feature-image"><img src="<?= $featuredImageURL ?>" alt="" /></a>
 											<p>
-												<?= $post->post_content?>
+												<?= the_content() ?>
 											</p>
 										</section>
 
