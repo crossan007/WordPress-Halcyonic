@@ -1,7 +1,9 @@
 <!DOCTYPE HTML>
 <!--
 	Halcyonic by HTML5 UP
+	WordPress theme by Charles Crossan
 	html5up.net | @ajlkn
+	Charles Crossan | @crossan007
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
