@@ -24,7 +24,7 @@
 				<div class="6u 12u(mobile)">
 
 					<!-- Banner Image -->
-						<a href="#" class="bordered-feature-image"><img src="images/banner.jpg" alt="" /></a>
+						<a href="#" class="bordered-feature-image"><img src="https://html5up.net/uploads/demos/halcyonic/images/banner.jpg" alt="" /></a>
 
 				</div>
 			</div>
