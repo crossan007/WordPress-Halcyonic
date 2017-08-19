@@ -24,9 +24,15 @@ function register_featured_post_type()
                                'name'          => __('Featured Posts'),
                                'singular_name' => __('Featured Post'),
                            ],
-                           'public'      => true,
+                           'public'      => false,
+                           'publicly_queryable' => true,
+                           'show_ui' => true,
+                           'exclude_from_search' => true,  // you should exclude it from search results
+                           'show_in_nav_menus' => false,  // you shouldn't be able to add it to menus
+                           'has_archive' => false,  // it shouldn't have archive page
+                           'rewrite' => false,  // it shouldn't have rewrite rules
                            'menu_position' => 20,
-                           'supports' => array( 'title', 'editor', 'custom-fields' )
+                           'supports' => array( 'title', 'editor','excerpt','thumbnail')
                        ]
     );
 }
@@ -34,11 +40,8 @@ function register_featured_post_type()
 function featured_post_urls(){
   global $post;
   $custom = get_post_custom($post->ID);
-  $image_url = $custom["image_url"][0];
   $link_url = $custom["link_url"][0];
   ?>
-  <label>Image URL:</label>
-  <input name="image_url" value="<?php echo $image_url; ?>" />
   <label>Link URL:</label>
   <input name="link_url" value="<?php echo $link_url; ?>" />
   <?php
@@ -75,7 +78,7 @@ function admin_init(){
   add_meta_box("Featured Post Placement", "Placement", "featured_post_placement", "featured_post", "side", "low");
 }
 
-
+add_theme_support( 'post-thumbnails' );
 add_action('init', 'register_featured_post_type');
 add_action('init', 'register_my_menus');
 add_action("admin_init", "admin_init");
