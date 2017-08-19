@@ -1358,6 +1358,10 @@ Author URI: https://www.ccrossan.com
 				.sub-menu a {
 					margin-left:5px;
 				}
+
+				.sub-menu li {
+					float: none;
+				}
 				.menu-item .sub-menu {
 					position: absolute;
 					top: 100%;
