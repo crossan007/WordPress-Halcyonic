@@ -1,5 +1,29 @@
 <?php get_header(); ?>
 
+<!-- Banner --> 
+<div id="banner-wrapper">
+	<div id="banner">
+		<div class="container">
+			<div class="row">
+				<div class="6u 12u(mobile)">
+
+					<!-- Banner Copy -->
+						<p><?= get_bloginfo("description")?></p>
+						<a href="#" class="button-big">Go on, click me!</a>
+
+				</div>
+				<div class="6u 12u(mobile)">
+
+					<!-- Banner Image -->
+						<a href="#" class="bordered-feature-image"><img src="images/banner.jpg" alt="" /></a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
 <!-- Features -->
 <div id="features-wrapper">
 					<div id="features">

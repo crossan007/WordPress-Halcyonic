@@ -1285,6 +1285,13 @@ Author URI: https://www.ccrossan.com
 				text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.75);
 			}
 
+			#banner-wrapper {
+				background: #3B4346 url("images/bg02.jpg");
+				border-bottom: solid 1px #272d30;
+				box-shadow: inset 0px -1px 0px 0px #51575a;
+				text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.75);
+			}
+
 			.subpage #header-wrapper {
 				height: 155px;
 			}
@@ -1575,6 +1582,12 @@ Author URI: https://www.ccrossan.com
 			#header-wrapper {
 				background: #3B4346 url("images/bg01.jpg") top center;
 				box-shadow: inset 0px -1px 0px 0px #272d30, inset 0px -2px 0px 0px #51575a;
+				text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.75);
+			}
+
+			#banner-wrapper {
+				background: #353D40 url("images/bg02.jpg");
+				padding: 15px 15px 30px 15px;
 				text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.75);
 			}
 
