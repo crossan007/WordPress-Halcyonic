@@ -27,7 +27,7 @@
  * Featured content is set using the "Featured Post" custom post type on the left admin navigation 
 
 
-# WPDistillery
+# Theme Development
 
 WPDistillery is included in this repo as the development enviornment for this theme.  Relevant secionts from WPDistillery's documentation included below:
 
