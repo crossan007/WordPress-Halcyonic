@@ -1,5 +1,5 @@
-<!-- Footer -->
-<div id="footer-wrapper">
+				<!-- Footer -->
+				<div id="footer-wrapper">
 					<footer id="footer" class="container">
 						<div class="row">
 							<div class="8u 12u(mobile)">
@@ -7,40 +7,33 @@
 								<!-- Links -->
 									<section>
 										<h2>Links to Important Stuff</h2>
+										<?php
+											$menuLocations = get_nav_menu_locations();
+											$menuID = $menuLocations["bottom-menu"];
+											$menuItems = wp_get_nav_menu_items($menuID);
+											$topMenuItems = array_filter($menuItems, array(new menuParentIDFilter(0),"equals"));
+											
+
+										?>
 										<div>
 											<div class="row">
-												<div class="3u 12u(mobile)">
+												<?php foreach ($topMenuItems as $menuItem)
+												{
+													?>
+													<div class="3u 12u(mobile)">
 													<ul class="link-list last-child">
-														<li><a href="#">Neque amet dapibus</a></li>
-														<li><a href="#">Sed mattis quis rutrum</a></li>
-														<li><a href="#">Accumsan suspendisse</a></li>
-														<li><a href="#">Eu varius vitae magna</a></li>
+														<?php
+															echo "<li><a href=\"".$menuItem->url."\">".$menuItem->post_title."</a></li>";
+															foreach (array_filter($menuItems, array(new menuParentIDFilter($menuItem->ID),"equals")) as $subMenuItem)
+															{
+																echo  "<li><a href=\"".$subMenuItem->url."\">".$subMenuItem->post_title."</a></li>";
+															}
+														?>
 													</ul>
-												</div>
-												<div class="3u 12u(mobile)">
-													<ul class="link-list last-child">
-														<li><a href="#">Neque amet dapibus</a></li>
-														<li><a href="#">Sed mattis quis rutrum</a></li>
-														<li><a href="#">Accumsan suspendisse</a></li>
-														<li><a href="#">Eu varius vitae magna</a></li>
-													</ul>
-												</div>
-												<div class="3u 12u(mobile)">
-													<ul class="link-list last-child">
-														<li><a href="#">Neque amet dapibus</a></li>
-														<li><a href="#">Sed mattis quis rutrum</a></li>
-														<li><a href="#">Accumsan suspendisse</a></li>
-														<li><a href="#">Eu varius vitae magna</a></li>
-													</ul>
-												</div>
-												<div class="3u 12u(mobile)">
-													<ul class="link-list last-child">
-														<li><a href="#">Neque amet dapibus</a></li>
-														<li><a href="#">Sed mattis quis rutrum</a></li>
-														<li><a href="#">Accumsan suspendisse</a></li>
-														<li><a href="#">Eu varius vitae magna</a></li>
-													</ul>
-												</div>
+													</div>
+													<?php
+												}
+												?>
 											</div>
 										</div>
 									</section>

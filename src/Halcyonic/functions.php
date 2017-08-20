@@ -14,6 +14,20 @@
 function register_my_menus() {
   register_nav_menu('top-menu',__( 'Top Menu' ));
   register_nav_menu('big-button',__( 'Big Button' ));
+  register_nav_menu('bottom-menu',__( 'Footer Menu' ));
+  class menuParentIDFilter {
+    private $parentID;
+
+    function __construct($parentID)
+    {
+      $this->parentID = $parentID;
+    }
+
+    function equals($menuItem)
+    {
+      return $menuItem->menu_item_parent == $this->parentID;
+    }
+  }
 }
 
 function register_featured_post_type()
