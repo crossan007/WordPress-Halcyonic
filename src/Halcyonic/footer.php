@@ -39,20 +39,29 @@
 									</section>
 
 							</div>
-							<div class="4u 12u(mobile)">
+							<?php
+								$post = get_posts(array(
+									'post_type' => 'featured_post',
+									'post_status' => 'publish',
+									'numberposts' => 1,
+									'meta_key' => "featured_post_location",
+									'meta_value' => 'footer-blurb'
+								))[0];
+								if ($post) {
+								?>
+									<div class="4u 12u(mobile)">
+										<!-- Blurb -->
+										<section>
+											<h2><?= $post->post_title ?></h2>
+											<p>
+												<?= $post->post_content ?>
+											</p>
+										</section>
 
-								<!-- Blurb -->
-									<section>
-										<h2>An Informative Text Blurb</h2>
-										<p>
-											Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. Suspendisse eu
-											varius nibh. Suspendisse vitae magna eget odio amet mollis. Duis neque nisi,
-											dapibus sed mattis quis, sed rutrum accumsan sed. Suspendisse eu varius nibh
-											lorem ipsum amet dolor sit amet lorem ipsum consequat gravida justo mollis.
-										</p>
-									</section>
-
-							</div>
+									</div>
+								<?php
+								}
+								?>
 						</div>
 					</footer>
 				</div>

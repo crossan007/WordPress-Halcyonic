@@ -63,6 +63,7 @@ function featured_post_details(){
   <select name="featured_post_location">
     <option value="features" <?= ($featured_post_location == 'features' ? 'selected' :'')?>>Features</option>
     <option value="content" <?= ($featured_post_location == 'content' ? 'selected' :'')?>>Content</option>
+    <option value="footer-blurb" <?= ($featured_post_location == 'footer-blurb' ? 'selected' :'')?>>Footer Blurb</option>
   </select>
   <br/>
   <label>Position:</label>
