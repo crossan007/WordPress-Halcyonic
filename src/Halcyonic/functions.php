@@ -137,8 +137,6 @@ function register_theme_sidebars() {
   ));
 }
 
-
-
 add_action('widgets_init','register_theme_sidebars');
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 add_theme_support( 'post-thumbnails' );
