@@ -12,8 +12,6 @@
 											$menuID = $menuLocations["bottom-menu"];
 											$menuItems = wp_get_nav_menu_items($menuID);
 											$topMenuItems = array_filter($menuItems, array(new menuParentIDFilter(0),"equals"));
-											
-
 										?>
 										<div>
 											<div class="row">
