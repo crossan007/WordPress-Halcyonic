@@ -1340,10 +1340,10 @@ Author URI: https://www.ccrossan.com
 					font-weight: 200;
 				}
 
-				.menu li {
+				#header .menu li {
 					float:left;
 				}
-					.menu a {
+				#header  .menu a {
 						color: #c6c8c8;
 						text-decoration: none;
 						font-size: 1.4em;
@@ -1351,18 +1351,18 @@ Author URI: https://www.ccrossan.com
 						outline: 0;
 					}
 
-						.menu a:hover {
+					#header .menu a:hover {
 							color: #f6f8f8;
 						}
 
-				.sub-menu a {
+						#header  .sub-menu a {
 					margin-left:5px;
 				}
 
-				.sub-menu li {
+				#header .sub-menu li {
 					float: none;
 				}
-				.menu-item .sub-menu {
+				#header  .menu-item .sub-menu {
 					position: absolute;
 					top: 100%;
 					display: none;
@@ -1379,7 +1379,7 @@ Author URI: https://www.ccrossan.com
 					padding: 0;
 				}
 
-				.menu-item:hover .sub-menu {
+				#header  .menu-item:hover .sub-menu {
 					display: block;
 				} 
 
