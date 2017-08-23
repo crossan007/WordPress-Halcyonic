@@ -12,36 +12,7 @@ Template Name: Three Column Page
 						<div class="container">
 							<div class="row">
 								<div class="3u 12u(mobile)">
-
-									<!-- Left Sidebar -->
-										<section>
-											<header>
-												<h2>Ipsum Dolor</h2>
-											</header>
-											<p>
-												Vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam
-												iaculis. Phasellus ultrices diam sit amet orci lacinia sed consequat.
-											</p>
-											<ul class="link-list">
-												<li><a href="#">Sed dolore viverra</a></li>
-												<li><a href="#">Ligula non varius</a></li>
-												<li><a href="#">Dis parturient montes</a></li>
-												<li><a href="#">Nascetur ridiculus</a></li>
-											</ul>
-										</section>
-										<section>
-											<header>
-												<h2>Magna Phasellus</h2>
-											</header>
-											<ul class="link-list">
-												<li><a href="#">Sed dolore viverra</a></li>
-												<li><a href="#">Ligula non varius</a></li>
-												<li><a href="#">Nec sociis natoque</a></li>
-												<li><a href="#">Penatibus et magnis</a></li>
-												<li><a href="#">Dis parturient montes</a></li>
-												<li><a href="#">Nascetur ridiculus</a></li>
-											</ul>
-										</section>
+									<?php dynamic_sidebar('Three Column Page Layout - Left'); ?>
 								</div>
 								<div class="6u 12u(mobile) important(mobile)">
                                 	<? if (have_posts() ) : while (have_posts()) : the_post(); ?>
@@ -57,37 +28,7 @@ Template Name: Three Column Page
                                     <? endwhile; endif; ?>
 								</div>
 								<div class="3u 12u(mobile)">
-
-									<!-- Right Sidebar -->
-										<section>
-											<header>
-												<h2>Magna Phasellus</h2>
-											</header>
-											<ul class="link-list">
-												<li><a href="#">Sed dolore viverra</a></li>
-												<li><a href="#">Ligula non varius</a></li>
-												<li><a href="#">Nec sociis natoque</a></li>
-												<li><a href="#">Penatibus et magnis</a></li>
-												<li><a href="#">Dis parturient montes</a></li>
-												<li><a href="#">Nascetur ridiculus</a></li>
-											</ul>
-										</section>
-										<section>
-											<header>
-												<h2>Ipsum Dolor</h2>
-											</header>
-											<p>
-												Vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam
-												iaculis. Phasellus ultrices diam sit amet orci lacinia sed consequat.
-											</p>
-											<ul class="link-list">
-												<li><a href="#">Sed dolore viverra</a></li>
-												<li><a href="#">Ligula non varius</a></li>
-												<li><a href="#">Dis parturient montes</a></li>
-												<li><a href="#">Nascetur ridiculus</a></li>
-											</ul>
-										</section>
-
+									<?php dynamic_sidebar('Three Column Page Layout - Right'); ?>
 								</div>
 							</div>
 						</div>

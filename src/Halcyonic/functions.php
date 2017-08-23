@@ -30,8 +30,7 @@ function register_my_menus() {
   }
 }
 
-function register_featured_post_type()
-{
+function register_featured_post_type() {
     register_post_type('featured_post',
                        [
                            'labels'      => [
@@ -51,7 +50,7 @@ function register_featured_post_type()
     );
 }
 
-function featured_post_details(){
+function featured_post_details() {
   global $post;
   $custom = get_post_custom($post->ID);
   $featured_post_location = $custom["featured_post_location"][0];
@@ -80,7 +79,7 @@ function featured_post_details(){
   <?php
 }
  
-function save_details(){
+function save_details() {
   global $post;
  
   update_post_meta($post->ID, "list_style", $_POST["list_style"]);
@@ -89,7 +88,7 @@ function save_details(){
   update_post_meta($post->ID, "featured_post_position", $_POST["featured_post_position"]);
 }
 
-function admin_init(){
+function admin_init() {
   add_meta_box("Featured Post Details", "Details", "featured_post_details", "featured_post", "side", "low");
 }
 
@@ -103,6 +102,44 @@ function themename_custom_logo_setup() {
   add_theme_support( 'custom-logo', $defaults );
 }
 
+function register_theme_sidebars() {
+  register_sidebar(array(
+    'id' => '1',
+    'name' => 'Two Column Page Layout - Left',
+    'before_widget' => '<section>',
+    'after_widget' => '</section>',
+    'before_title' => '<header><h2>',
+    'after_title' => '</h2></header>',
+  ));
+  register_sidebar(array(
+    'id' => '2',
+    'name' => 'Two Column Page Layout - Right',
+    'before_widget' => '<section>',
+    'after_widget' => '</section>',
+    'before_title' => '<header><h2>',
+    'after_title' => '</h2></header>',
+  ));
+  register_sidebar(array(
+    'id' => '3',
+    'name' => 'Three Column Page Layout - Left',
+    'before_widget' => '<section>',
+    'after_widget' => '</section>',
+    'before_title' => '<header><h2>',
+    'after_title' => '</h2></header>',
+  ));
+  register_sidebar(array(
+    'id' => '4',
+    'name' => 'Three Column Page Layout - Right',
+    'before_widget' => '<section>',
+    'after_widget' => '</section>',
+    'before_title' => '<header><h2>',
+    'after_title' => '</h2></header>',
+  ));
+}
+
+
+
+add_action('widgets_init','register_theme_sidebars');
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 add_theme_support( 'post-thumbnails' );
 add_action('init', 'register_featured_post_type');
