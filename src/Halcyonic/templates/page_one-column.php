@@ -22,7 +22,7 @@ get_header(); ?>
 											<?= the_content(); ?>
                                         </section>
                                         
-                                    <?= endwhile; endif; ?>
+                                    <?php endwhile; endif; ?>
 
 								</div>
 							</div>
