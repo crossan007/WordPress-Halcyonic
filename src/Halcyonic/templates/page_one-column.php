@@ -2,8 +2,7 @@
 /*
 Template Name: One Column Page
 */
-?>
-<? get_header(); ?>
+get_header(); ?>
 
 
 <!-- Content -->
@@ -13,17 +12,17 @@ Template Name: One Column Page
 							<div class="row">
 								<div class="12u">
 
-                                <? if (have_posts() ) : while (have_posts()) : the_post(); ?>
+                                <?php if (have_posts() ) : while (have_posts()) : the_post(); ?>
 									<!-- Main Content -->
 										<section>
 											<header>
-												<h2><? the_title(); ?></h2>
+												<h2><?= the_title(); ?></h2>
 												<h3><?= (has_excerpt() ? get_the_excerpt() : "") ?></h3>
 											</header>
-											<? the_content(); ?>
+											<?= the_content(); ?>
                                         </section>
                                         
-                                    <? endwhile; endif; ?>
+                                    <?= endwhile; endif; ?>
 
 								</div>
 							</div>
@@ -31,4 +30,4 @@ Template Name: One Column Page
 					</div>
                 </div>
                 
-<? get_footer(); ?>
+<?= get_footer(); ?>
