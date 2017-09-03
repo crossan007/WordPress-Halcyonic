@@ -13,7 +13,7 @@ get_header(); ?>
 								<div class="3u 12u(mobile)">
 									<?php dynamic_sidebar('Three Column Page Layout - Left'); ?>
 								</div>
-								<div class="6u 12u(mobile) important(mobile)">
+								<div class="6u 12u(mobile) important(mobile)" id="main-content">
                                 	<?php if (have_posts() ) : while (have_posts()) : the_post(); ?>
 									<!-- Main Content -->
 										<section>

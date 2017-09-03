@@ -33,7 +33,7 @@ Author URI: https://www.ccrossan.com
 		list-style: none;
 	}
 
-	#content ol, #content ul {
+	#main-content ol, #main-content ul {
 		list-style-type:initial;
 		padding-left:30px;
 	}
@@ -1094,7 +1094,7 @@ Author URI: https://www.ccrossan.com
 	}
 
 	ul, ol, p, dl {
-		margin: 0 0 2em 0;
+		margin: 0 0 .7em 0;
 	}
 
 	a {

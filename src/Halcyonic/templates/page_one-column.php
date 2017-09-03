@@ -10,7 +10,7 @@ get_header(); ?>
 					<div id="content">
 						<div class="container">
 							<div class="row">
-								<div class="12u">
+								<div class="12u" id="main-content">
 
                                 <?php if (have_posts() ) : while (have_posts()) : the_post(); ?>
 									<!-- Main Content -->
