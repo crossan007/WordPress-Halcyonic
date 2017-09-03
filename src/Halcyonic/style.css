@@ -1351,15 +1351,16 @@ Author URI: https://www.ccrossan.com
 						outline: 0;
 					}
 
-					#header .menu a:hover {
-							color: #f6f8f8;
-						}
+						#header .menu a:hover {
+						color: #f6f8f8;
+					}
 
-						#header  .sub-menu a {
-					margin-left:5px;
+					#header  .sub-menu a {
+						margin-left:5px;
 				}
 
 				#header .sub-menu li {
+					padding-top:10px;
 					float: none;
 				}
 				#header  .menu-item .sub-menu {
@@ -1907,6 +1908,12 @@ Author URI: https://www.ccrossan.com
 					#navPanel .link:last-child {
 						border-bottom: 0;
 					}
+
+				#navPanel .depth-1 {
+					padding-left:48px;
+					line-height:1.25em;
+					font-size:1em;
+				}
 
 			body.navPanel-visible #page-wrapper {
 				-moz-transform: translateX(275px);
