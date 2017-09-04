@@ -2,7 +2,7 @@
 Theme Name: HTML5 UP - Halcyonic 
 Theme URI: https://html5up.net/halcyonic
 Description: WordPress conversion of the HTML 5 plain theme
-Version: 1.1
+Version: 1.2
 Author: Charles Crossan
 Author URI: https://www.ccrossan.com
 */
@@ -1266,6 +1266,17 @@ Author URI: https://www.ccrossan.com
 		border-top: solid 1px #e0e4e6;
 		border-bottom: solid 1px #b5bec3;
 	}
+
+/*  Staff Member Blocks */
+
+.staff-member-block section {
+	padding-bottom:40px !important;
+}
+
+.staff-read-more {
+	float:right;
+	margin-right:10px;
+}
 
 /* Desktop */
 

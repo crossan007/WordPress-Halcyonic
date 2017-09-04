@@ -39,16 +39,11 @@ get_header();
 						   $email_mailto = '<a class="staff-member-email" href="mailto:'.antispambot( $email ).'" title="Email '.$name.'">'.antispambot( $email ).'</a>';
 						   
 					?>
-						<div class="3u 12u(mobile)" style="height:310px; overflow:hidden;">
-							<section style="padding:5px;">
+						<div class="3u 12u(mobile) staff-member-block">
+							<a class="staff-read-more" href="<?=$name_slug?>">Read More</a>
+							<section>
 								<?=$t_photo?>
 								<header><h2><?=$t_name?></h2><h3><?=$title?></h3></header>
-								<ul>
-									<?php if($fb_url) { ?><li><a href="<?=$fb_url?>">Facebook</a></li><?php } ?>
-									<?php if($tw_handle) { ?><li><a href="<?=$tw_url?>">Twitter: @<?= $tw_handle?></a></li><?php } ?>
-									<?php if($email) { ?><li><a href="mailto:<?=$email?>">Email: <?= $email ?></a></li><?php } ?>
-								</ul>
-								<a style="float:right" href="<?=$name_slug?>">Read More</a>
 							</section>
 						</div>
 					<?php 
