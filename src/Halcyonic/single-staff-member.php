@@ -23,7 +23,7 @@ $li_url     = $custom["_staff_member_li"][0];
 if(has_post_thumbnail()){
     
    $t_photo_url = wp_get_attachment_url( get_post_thumbnail_id() );
-   $t_photo = '<img class="staff-member-page-photo" style="width:100px;height:100px;" src="'.$t_photo_url.'" alt = "'.$title.'">';
+   $t_photo = '<img class="staff-member-page-photo" style="width:200px;height:200px;" src="'.$t_photo_url.'" alt = "'.$title.'">';
    }else{
    $t_photo_url = '';
    $t_photo = '';
