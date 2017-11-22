@@ -66,7 +66,7 @@
 
 			<!-- Copyright -->
 				<div id="copyright">
-					&copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a> | WordPress Theme: <a href="https://www.ccrossan.com">Charles Crossan</a>
+					&copy; <?= get_bloginfo("name")?>. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a> | WordPress Theme: <a href="https://www.ccrossan.com">Charles Crossan</a>
 				</div>
 
 		</div>
