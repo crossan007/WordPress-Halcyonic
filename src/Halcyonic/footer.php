@@ -6,25 +6,30 @@
 
 								<!-- Links -->
 									<section>
-										<h2>Links to Important Stuff</h2>
 										<?php
 											$menuLocations = get_nav_menu_locations();
 											$menuID = $menuLocations["bottom-menu"];
 											$menuItems = wp_get_nav_menu_items($menuID);
-											$topMenuItems = array_filter($menuItems, array(new menuParentIDFilter(0),"equals"));
+											$menu = wp_get_nav_menu_object( $menuID );
+											
+											if (is_array($menuItems)) {
+												$topMenuItems = array_filter($menuItems, array(new menuParentIDFilter(0),"equals"));
+											
 										?>
+										<h2><?= $menu->name ?></h2>
 										<div>
 											<div class="row">
 												<?php foreach ($topMenuItems as $menuItem)
 												{
+													
 													?>
 													<div class="3u 12u(mobile)">
 													<ul class="link-list last-child">
 														<?php
-															echo "<li><a href=\"".$menuItem->url."\">".$menuItem->post_title."</a></li>";
+															echo "<li><a ". (!empty($menuItem->target) ? "target=\"".$menuItem->target."\"" : "") ." href=\"".$menuItem->url."\">".$menuItem->title."</a></li>";
 															foreach (array_filter($menuItems, array(new menuParentIDFilter($menuItem->ID),"equals")) as $subMenuItem)
 															{
-																echo  "<li><a href=\"".$subMenuItem->url."\">".$subMenuItem->post_title."</a></li>";
+																echo  "<li><a target=\"".$subMenuItem->target."\" href=\"".$subMenuItem->url."\">".$subMenuItem->post_title."</a></li>";
 															}
 														?>
 													</ul>
@@ -34,6 +39,9 @@
 												?>
 											</div>
 										</div>
+										<?php
+											}
+										?>
 									</section>
 
 							</div>
