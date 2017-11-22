@@ -15,10 +15,12 @@
 							$menuID = $menuLocations['big-button'];
 							$primaryNav = wp_get_nav_menu_items($menuID);
 							//print_r($primaryNav);
-							
+							if (!empty($primaryNav)) {
 						?>
-
-						<a href="<?= $primaryNav[0]->url ?>" class="button-big"><?= $primaryNav[0]->title ?><a>
+							<a href="<?= $primaryNav[0]->url ?>" class="button-big"><?= $primaryNav[0]->title ?><a>
+						<?php	
+							}
+						?>
 
 				</div>
 				<div class="6u 12u(mobile)">
